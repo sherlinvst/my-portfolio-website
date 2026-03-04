@@ -1,4 +1,7 @@
 import { useState } from "react";
+import burgerBefore from "../assets/icons/hamburger-before.svg";
+import burgerAfter from "../assets/icons/hamburger-after.svg";
+
 
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -6,14 +9,14 @@ const NavBar = () => {
     const [hovered, setHovered] = useState(false);
     const toggleMenu = () => setMenuOpen(!menuOpen);
     const menuItems = ["About Me", "Projects", "Skills & Tools", "Education", "Contact"];
-    const burgerIcon = menuOpen || hovered ? "/src/assets/icons/hamburger-after.svg" : "/src/assets/icons/hamburger-before.svg";
+    const burgerIcon = menuOpen || hovered ? burgerAfter : burgerBefore;
 
     return (
     // Main navigation bar
-    <header className="bg-[rgb(208,57,112)] w-full h-15 flex justify-between items-center px-2">
+    <header className="bg-[rgb(208,57,112)] w-full h-16 flex justify-between items-center px-2">
 
         {/* The website name */}
-        <h1 className="whitespace-nowrap text-[rgb(255,252,242)] text-[20px] sm:text-[24px] lg:text-[28px] font-brandFont font-semibold pl-4.25 md:pl-23 lg:pl-37.5 pr-5">
+        <h1 className="whitespace-nowrap text-[rgb(255,252,242)] text-[20px] sm:text-[24px] lg:text-[28px] font-brandFont font-semibold pl-15 md:pl-23 lg:pl-37.5 pr-5">
         sherlin ticsay
         </h1>
 
@@ -30,7 +33,7 @@ const NavBar = () => {
             </div> 
             
             {/* Hambuger menu for tablet and phone screens */}
-            <div className={`relative lg:hidden flex flex-col rounded-t ${menuOpen ? "bg-[rgb(255,252,242)] flex-64" : "bg-transparent"}`}>
+            <div className={`relative lg:hidden flex flex-col rounded-t ${menuOpen ? "bg-[rgb(255,252,242)] flex w-64" : "bg-transparent"}`}>
                 <button 
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
@@ -45,7 +48,7 @@ const NavBar = () => {
                     <img
                     src={burgerIcon}
                     alt="Menu Icon"
-                    className="w-6.75 h-3.75 transition-all duration-200"
+                    className="w-7 h-4 transition-all duration-200"
                     />
                 </button>
 
