@@ -8,9 +8,12 @@
   --font-title: "Poppins", sans-serif;
 
   --text-title-full: 34px !important;
-  --text-title-med: 30px;
-  --text-title-small: 26px;
+  --text-title-med: 30px !important;
+  --text-title-small: 26px !important;
+
   --text-main-full: 23px;
+  --text-main-med: 20px;
+  --text-main-small: 17px;
 
   --height-med-size: 70px;
 }
