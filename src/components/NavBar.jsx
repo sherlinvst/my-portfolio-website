@@ -16,7 +16,7 @@ const NavBar = () => {
     <header className="bg-[rgb(208,57,112)] w-full h-16 flex justify-between items-center px-2">
 
         {/* The website name */}
-        <h1 className="whitespace-nowrap text-[rgb(255,252,242)] text-[20px] sm:text-[24px] lg:text-main-full font-brand font-bold pl-15 md:pl-23 lg:pl-37.5 pr-5">
+        <h1 className="whitespace-nowrap text-[rgb(255,252,242)] text-[20px] sm:text-[24px] lg:text-main-full font-brand font-semibold pl-15 md:pl-23 lg:pl-37.5 pr-5">
         sherlin ticsay
         </h1>
 
